@@ -1,0 +1,9 @@
+<UI>
+  <sprite define="gui::ArrowsGUI">
+    <child name="up" type="Bitmap" x="75" y="0" childIndex="0" width="29" height="29" alpha="1" source="arrow_up"/>
+    <child name="down" type="Bitmap" x="75" y="35" childIndex="1" width="29" height="29" alpha="1" source="arrow_down"/>
+    <child name="left" type="Bitmap" x="38" y="34" childIndex="2" width="29" height="29" alpha="1" source="arrow_left"/>
+    <child name="right" type="Bitmap" x="114" y="38" childIndex="3" width="29" height="29" alpha="1" source="arrow_right"/>
+    <child name="back" type="Bitmap" x="0" y="14" childIndex="4" width="26" height="29" alpha="1" source="back"/>
+  </sprite>
+</UI>
