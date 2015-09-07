@@ -1,0 +1,3 @@
+﻿class BlockVO extends AUnitVO
+{
+} 

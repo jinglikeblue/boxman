@@ -1,0 +1,3 @@
+﻿class TargetVO extends AUnitVO
+{
+} 
