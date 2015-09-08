@@ -4,6 +4,7 @@
 var ResUtil = (function () {
     function ResUtil() {
     }
+    var __egretProto__ = ResUtil.prototype;
     //创建一个纹理
     ResUtil.createTexture = function (name) {
         var texture = RES.getRes(name);
@@ -45,4 +46,5 @@ var ResUtil = (function () {
     };
     return ResUtil;
 })();
+ResUtil.prototype.__class__ = "ResUtil";
 //# sourceMappingURL=ResUtil.js.map

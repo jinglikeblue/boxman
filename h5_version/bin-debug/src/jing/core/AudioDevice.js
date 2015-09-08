@@ -1,6 +1,7 @@
 var AudioDevice = (function () {
     function AudioDevice() {
     }
+    var __egretProto__ = AudioDevice.prototype;
     /**
     * 在第一次捕获到点击事件时，预加载声音文件，用这个的好处是第一次准备好以后，可以在IOS或ANDROID中无点击事件时播放声音
     */
@@ -46,9 +47,10 @@ var AudioDevice = (function () {
     /**
     * 播放音效
     */
-    AudioDevice.playEffect = function (name) {
+    AudioDevice.playEffect = function (name, loop) {
+        if (loop === void 0) { loop = false; }
         var sound = AudioDevice.getSound(name);
-        sound.play();
+        sound.play(loop);
         return sound;
     };
     /**
@@ -76,4 +78,5 @@ var AudioDevice = (function () {
     AudioDevice._bgm = null;
     return AudioDevice;
 })();
+AudioDevice.prototype.__class__ = "AudioDevice";
 //# sourceMappingURL=AudioDevice.js.map

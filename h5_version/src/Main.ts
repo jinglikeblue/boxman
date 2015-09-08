@@ -116,12 +116,29 @@ class Main extends egret.DisplayObjectContainer {
     private createScene():void {
 
         GUIManager.init(this.stage, null, null);
-        new LevelLoader().load(1, function (vo: LevelVO): void
-        {
-            vo.name;
-        });
+        new LevelLoader().load(1, this.onLoadLevel, this);
 
+        //var mc: egret.MovieClip = ResUtil.createMovieClip("role", "stand_down");
+        //mc.play(-1);
+        //this.addChild(mc);
         
+    }
+
+    private onLoadLevel(vo:LevelVO): void
+    {
+        var img: egret.Bitmap = ResUtil.createBitmap("ground_jpg");
+        img.fillMode = egret.BitmapFillMode.REPEAT;
+        img.width = this.stage.stageWidth;
+        img.height = this.stage.stageHeight;
+        this.addChild(img);
+
+        DataCenter.level = vo;        
+        var map: GameMap = new GameMap(vo);
+        
+        this.addChild(map);
+        //AudioDevice.playBGM("bgm_mp3");
+
+
     }
 
 

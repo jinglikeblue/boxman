@@ -1,6 +1,7 @@
 var NoticeManager = (function () {
     function NoticeManager() {
     }
+    var __egretProto__ = NoticeManager.prototype;
     /**
     * 注册一个通知的监听（类似于事件机制,通过回调实现)
     * @param handleType 操作类型
@@ -59,4 +60,5 @@ var NoticeManager = (function () {
     NoticeManager._registeredNotice = {};
     return NoticeManager;
 })();
+NoticeManager.prototype.__class__ = "NoticeManager";
 //# sourceMappingURL=NoticeManager.js.map

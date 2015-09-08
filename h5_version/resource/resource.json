@@ -1,7 +1,7 @@
 {
 	"groups":[
 	{
-		"keys":"",
+		"keys":"role_json,role_png,block_png,box_png,box_on_target_png,ground_jpg,target_jpg,boot_mp3,push_mp3",
 		"name":"preload"
 	}],
 	"resources":[
@@ -849,5 +849,20 @@
 		"name":"target_jpg",
 		"type":"image",
 		"url":"assets/target.jpg"
+	},
+	{
+		"name":"bgm_mp3",
+		"type":"sound",
+		"url":"sounds/bgm.mp3"
+	},
+	{
+		"name":"boot_mp3",
+		"type":"sound",
+		"url":"sounds/boot.mp3"
+	},
+	{
+		"name":"push_mp3",
+		"type":"sound",
+		"url":"sounds/push.mp3"
 	}]
 }

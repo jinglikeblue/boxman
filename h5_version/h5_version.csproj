@@ -519,8 +519,10 @@
     <TypeScriptCompile Include="src\datas\consts\MapInfo.ts" />
     <TypeScriptCompile Include="src\datas\consts\Direction.ts" />
     <TypeScriptCompile Include="src\datas\consts\UnitType.ts" />
+    <TypeScriptCompile Include="src\datas\DataCenter.ts" />
     <TypeScriptCompile Include="src\datas\vo\units\TargetVO.ts" />
     <TypeScriptCompile Include="src\jing\core\AudioDevice.ts" />
+    <TypeScriptCompile Include="src\jing\game\move\MoveCompute.ts" />
     <TypeScriptCompile Include="src\jing\net\NetProxy.ts" />
     <TypeScriptCompile Include="src\jing\notice\Notice.ts" />
     <TypeScriptCompile Include="src\jing\notice\NoticeManager.ts" />
@@ -541,11 +543,16 @@
     <TypeScriptCompile Include="src\datas\vo\MapNodeVO.ts" />
     <TypeScriptCompile Include="src\datas\vo\units\RoleVO.ts" />
     <TypeScriptCompile Include="src\datas\vo\StepVO.ts" />
+    <TypeScriptCompile Include="src\notice\GameNotice.ts" />
     <TypeScriptCompile Include="src\util\IntUtil.ts" />
     <TypeScriptCompile Include="src\util\LevelLoader.ts" />
+    <TypeScriptCompile Include="src\util\MoveUtil.ts" />
     <TypeScriptCompile Include="src\views\unit\AUnit.ts" />
     <TypeScriptCompile Include="src\views\unit\Block.ts" />
     <TypeScriptCompile Include="src\views\GameMap.ts" />
+    <TypeScriptCompile Include="src\views\unit\Box.ts" />
+    <TypeScriptCompile Include="src\views\unit\Role.ts" />
+    <TypeScriptCompile Include="src\views\unit\Target.ts" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

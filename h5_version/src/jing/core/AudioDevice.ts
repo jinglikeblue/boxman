@@ -60,9 +60,9 @@
     /**
     * 播放音效
     */
-    public static playEffect(name: string): egret.Sound {
+    public static playEffect(name: string, loop:boolean = false): egret.Sound {
         var sound: egret.Sound = AudioDevice.getSound(name);
-        sound.play();        
+        sound.play(loop);        
         return sound;
     }
 

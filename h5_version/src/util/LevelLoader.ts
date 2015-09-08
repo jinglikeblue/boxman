@@ -16,9 +16,9 @@ class LevelLoader
         
     }
 
-    public load(level: number, onComplete: Function): void
+    public load(level: number, onComplete: Function, thisObj:any): void
     {        
-        this._onComplete = onComplete;
+        this._onComplete = onComplete.bind(thisObj);
         this._vo = new LevelVO();
         this._vo.id = level;
         RES.getResAsync("level" + level + "_xml", this.onLoaded, this);
@@ -66,6 +66,7 @@ class LevelLoader
             vo.id = this._unitId++;
             vo.gridX = +unit.$x;
             vo.gridY = +unit.$y;
+            vo.unitType = unitType;
             this._vo.units[vo.id] = vo;
             this._vo.gridDic[IntUtil.mixedTwoInt(vo.gridX, vo.gridY)] = vo;
             var mapNodeVO: MapNodeVO = this._vo.mapNodes[vo.gridX][vo.gridY];

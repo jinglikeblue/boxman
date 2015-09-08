@@ -104,9 +104,21 @@ var Main = (function (_super) {
      */
     Main.prototype.createScene = function () {
         GUIManager.init(this.stage, null, null);
-        new LevelLoader().load(1, function (vo) {
-            vo.name;
-        });
+        new LevelLoader().load(1, this.onLoadLevel, this);
+        //var mc: egret.MovieClip = ResUtil.createMovieClip("role", "stand_down");
+        //mc.play(-1);
+        //this.addChild(mc);
+    };
+    Main.prototype.onLoadLevel = function (vo) {
+        var img = ResUtil.createBitmap("ground_jpg");
+        img.fillMode = egret.BitmapFillMode.REPEAT;
+        img.width = this.stage.stageWidth;
+        img.height = this.stage.stageHeight;
+        this.addChild(img);
+        DataCenter.level = vo;
+        var map = new GameMap(vo);
+        this.addChild(map);
+        //AudioDevice.playBGM("bgm_mp3");
     };
     return Main;
 })(egret.DisplayObjectContainer);
