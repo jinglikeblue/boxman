@@ -114,7 +114,7 @@
 
     private moveToGrid(newGrid: egret.Point, levelVO: LevelVO): void
     {
-        AudioDevice.playEffect("push_mp3");
+        //AudioDevice.playEffect("push_mp3");
         //DataCenter.getInstance().audioDevice.play("push", new AudioSetting(1, 2));
         MoveUtil.updateGridDic(this._boxVO.gridX, this._boxVO.gridY, newGrid.x, newGrid.y, levelVO);
         this._boxVO.state = Box.MOVE_STATE;

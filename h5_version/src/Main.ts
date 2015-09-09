@@ -116,7 +116,7 @@ class Main extends egret.DisplayObjectContainer {
     private createScene():void {
 
         GUIManager.init(this.stage, null, null);
-        new LevelLoader().load(1, this.onLoadLevel, this);
+        new LevelLoader().load(70, this.onLoadLevel, this);
 
         //var mc: egret.MovieClip = ResUtil.createMovieClip("role", "stand_down");
         //mc.play(-1);
@@ -126,6 +126,8 @@ class Main extends egret.DisplayObjectContainer {
 
     private onLoadLevel(vo:LevelVO): void
     {
+        DataCenter.stage = this.stage;
+
         var img: egret.Bitmap = ResUtil.createBitmap("ground_jpg");
         img.fillMode = egret.BitmapFillMode.REPEAT;
         img.width = this.stage.stageWidth;
@@ -133,7 +135,7 @@ class Main extends egret.DisplayObjectContainer {
         this.addChild(img);
 
         DataCenter.level = vo;        
-        var map: GameMap = new GameMap(vo);
+        var map: Level = new Level(vo);
         
         this.addChild(map);
         //AudioDevice.playBGM("bgm_mp3");
