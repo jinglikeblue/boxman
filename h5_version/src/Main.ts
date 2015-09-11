@@ -116,7 +116,7 @@ class Main extends egret.DisplayObjectContainer {
     private createScene():void {
 
         GUIManager.init(this.stage, null, null);
-        new LevelLoader().load(70, this.onLoadLevel, this);
+        new LevelLoader().load(1, this.onLoadLevel, this);
 
         //var mc: egret.MovieClip = ResUtil.createMovieClip("role", "stand_down");
         //mc.play(-1);

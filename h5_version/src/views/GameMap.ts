@@ -1,5 +1,6 @@
 ﻿class GameMap extends egret.Sprite
 {
+
     private _role: Role;
 
     private _levelVO: LevelVO;

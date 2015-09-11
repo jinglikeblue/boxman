@@ -6,12 +6,11 @@
     {
         super();
         this._map = new GameMap(levelVO);
+        this._map.x = (DataCenter.stage.stageWidth - MapInfo.GROUND_SIZE) / 2;
+        this._map.y = (DataCenter.stage.stageHeight - MapInfo.GROUND_SIZE) / 2;
         this._control = new ControlLayer();
 
         this.addChild(this._map);
-        this.addChild(this._control);
-
-        //this._map.width = DataCenter.stage.stageWidth;
-        this._map.scaleY = this._map.scaleX = DataCenter.stage.stageWidth / this._map.width;
+        this.addChild(this._control);  
     }
 }
